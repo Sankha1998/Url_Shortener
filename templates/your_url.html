@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-your url
-{{code}}
-</body>
-</html>
+
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-3 sdcard-1">
+            <div class="text-primary">
+                Go your url:<br>
+                <input class="form-control" value="{{ url_for('redirect_to_url', code=code,_external=True) }}" readonly>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

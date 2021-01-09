@@ -13,11 +13,15 @@
 
 
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#eee;">
-  <a class="navbar-brand text-danger" href="{{url_for('home')}}">Url Shortener</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar navbar-expand-lg navbar-light navbar-inverse" style="background-color:#eee;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand text-danger" href="{{url_for('home')}}">Url Shortener</a>
+      </div>
+     <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-item btn btn-lg" href="{{url_for('session_api')}}"> API </a></li>
+      </ul>
+    </div>
 </nav>
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong>  This webapp is created by <a href="https://www.linkedin.com/in/sankha-subhra-mondal-540133168/">Sankha Subhra Mondal</a></strong>

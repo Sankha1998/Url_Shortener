@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+{% block content %}
+{% for message in get_flashed_messages() %}
+<h2> {{message}} </h2>
+{% endfor %}
+
+<div class="container">
+ <div class="row mt-5">
+  <div class="col-md-6" style="padding:20px;">
+   <form action="your-url" method="post" class="stcard1">
+    <div class="form-group">
+     <label for="url"> Website URL : </label>
+     <input type="url" class="form-control"  name="url" value="" required>
+    </div>
+    <div class="form-group">
+     <label for="code">Short Name</label>
+     <input type="text" name="code" class="form-control" value="" required>
+    </div>
+    <input type="submit" class="form-control btn btn-sm btn-warning text-danger" value="Shorten">
+   </form>
+
+  </div>
+  <div class="col-md-6" style="padding:20px;">
+    <form action="your-url" method="post" enctype="multipart/form-data" class="stcard2">
+     <div class="form-group">
+       <label for="file"> Upload File : </label> <br>
+       <input type="file" name="file" value="" required>
+     </div>
+     <div class="form-group">
+      <label for="code">Short Name </label> <br>
+      <input type="text" name="code" class="form-control"  value="" required>
+     </div>
+      <input type="submit" class="form-control btn btn-sm btn-warning text-danger" value="Shorten">
+    </form>
+  </div>
+ </div>
+<div class="row mt-5 stcard">
+  <div class="col-md-6 offset-3">
+   {% if codes %}
+     <h2> Codes you have created till now:</h2>
+     <ul>
+      {% for code in codes %}
+       <a href="{{ url_for('redirect_to_url',code=code) }}">
+          <li>{{ code }}</li>
+       </a>
+      {% endfor %}
+     </ul>
+{% endif %}
+
+  </div>
+</div>
+</div>
+
+{% endblock %}

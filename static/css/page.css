@@ -1,0 +1,32 @@
+body{
+background: #ECE9E6;
+background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+}
+
+.stcard1{
+height:250px;
+padding: 20px;
+color:#7303c0;
+font-size: 15px;
+background: #2BC0E4;
+background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);
+background: linear-gradient(to right, #EAECC6, #2BC0E4);
+}
+.stcard2{
+height:250px;
+padding: 20px;
+color:#7303c0;
+font-size: 15px;
+background: #2BC0E4;
+background: -webkit-linear-gradient(to right, #2BC0E4, #EAECC6);
+background: linear-gradient(to right, #2BC0E4, #EAECC6);
+}
+.stcard{
+padding: 20px;
+color:#eee;
+font-size: 15px;
+background: #2BC0E4;
+background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4,#EAECC6);
+background: linear-gradient(to right, #EAECC6, #2BC0E4,#EAECC6);
+}
